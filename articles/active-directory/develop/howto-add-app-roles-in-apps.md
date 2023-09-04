@@ -83,6 +83,15 @@ To assign users and groups to roles by using the Azure portal:
 
 Confirm that the users and groups you added appear in the **Users and groups** list.
 
+## Assign application owner 
+
+1. In your app registration, under **Manage**, select **Owners**, and **Add owners**.
+1. In the new window, find and select the owner(s) that you want to assign to the application. Selected owners appear in the right panel. Once done, confirm with **Select**. The app owner(s) will now appear in the owner's list.
+
+>[!NOTE]
+>
+> Ensure that both the API application and the application you want to add permissions to both have an owner, otherwise the API will not be listed when requesting API permissions.
+
 ## Assign app roles to applications
 
 Once you've added app roles in your application, you can assign an app role to a client app by using the Azure portal or programmatically by using [Microsoft Graph](/graph/api/user-post-approleassignments).
