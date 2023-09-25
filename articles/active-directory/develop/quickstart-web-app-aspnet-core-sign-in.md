@@ -10,7 +10,7 @@ ms.subservice: develop
 ms.topic: quickstart
 ms.workload: identity
 
-ms.date: 08/28/2023
+ms.date: 09/25/2023
 ms.author: cwerner
 
 ms.reviewer: jmprieur
@@ -20,10 +20,8 @@ ms.custom: "devx-track-csharp, aaddev, identityplatformtop40, scenarios:getting-
 
 # Quickstart: Sign in users and call the Microsoft Graph API from an ASP.NET Core web app
 
-
 This quickstart uses a sample ASP.NET Core web app to show you how to sign in users by using the [authorization code flow](./v2-oauth2-auth-code-flow.md) and call the Microsoft Graph API. The sample uses [Microsoft Authentication Library for .NET](/entra/msal/dotnet/) and [Microsoft Identity Web](/entra/msal/dotnet/microsoft-identity-web/) for ASP.NET to handle authentication.
 
-In this article you register a web application in the Microsoft Entra admin center, and download a sample ASP.NET web application. You'll run the sample application, sign in with your personal Microsoft account or a work or school account, and sign out.
 
 ## Prerequisites
 
@@ -33,7 +31,7 @@ In this article you register a web application in the Microsoft Entra admin cent
 
 ## Register the application in the Microsoft Entra admin center
 
-1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/) as at least an [Cloud Application Administrator](../roles/permissions-reference.md#cloud-application-administrator).
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/) as at least an [Application Developer](../roles/permissions-reference.md#cloud-application-developer).
 1. Browse to **Identity** > **Applications** > **App registrations**.
 1. On the page that appears, select **+ New registration**.
 1. When the **Register an application** page appears, enter a name for your application, such as *identity-client-app*.
