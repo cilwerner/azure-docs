@@ -55,7 +55,7 @@ In ASP.NET Core, you can use Microsoft.Identity.Web to verify scopes in each con
 #### Verify the scopes on each controller action
 
 You can verify the scopes in the controller action by using the `[RequiredScope]` attribute. This attribute
-has several overrides. One that takes the required scopes directly, and one that takes a key to the configuration.
+has several overrides. One that takes the required scopes directly, and one that takes a key to the configuration. To enable the attribute, we can add `services.AddRequiredScopeAuthorization();`
 
 ##### Verify the scopes on a controller action with hardcoded scopes
 
@@ -63,6 +63,8 @@ The following code snippet shows the usage of the `[RequiredScope]` attribute wi
 
 ```csharp
 using Microsoft.Identity.Web
+
+services.AddRequiredScopeAuthorization();
 
 [Authorize]
 public class TodoListController : Controller
@@ -89,7 +91,7 @@ public class TodoListController : Controller
 
 You can also declare these required scopes in the configuration, and reference the configuration key:
 
-For instance if, in the appsettings.json you have the following configuration:
+For instance if, in *appsettings.json* you have the following configuration:
 
 ```JSon
 {
@@ -162,6 +164,8 @@ The following code snippet shows the usage of the `[RequiredScope]` attribute wi
 ```csharp
 using Microsoft.Identity.Web
 
+services.AddRequiredScopeAuthorization();
+
 [Authorize]
 [RequiredScope(scopeRequiredByApi)]
 public class TodoListController : Controller
@@ -189,6 +193,8 @@ Like on action, you can also declare these required scopes in the configuration,
 
 ```csharp
 using Microsoft.Identity.Web
+
+services.AddRequiredScopeAuthorization();
 
 [Authorize]
 [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
